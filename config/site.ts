@@ -1,6 +1,43 @@
 export const siteConfig = {
-  name: "My Website",
-  description: "A modern portfolio web application built with Next.js.",
-  url: "http://localhost:3000",
-  author: "Iben Connect"
-}
+  name: "My Portfolio",
+  fullName: "Imoh Sylvester Ben",
+  professionalTitle: "Mr",
+  shortName: "IB",
+  initials: "IB",
+  title: "iben",
+  role: "Full-Stack Developer & Backend Engineer",
+  tagline:
+    "I'm a Full-Stack Developer and Backend Engineer specializing in building scalable, secure, and user-focused web applications. I work primarily with React, Next.js, Node.js, NestJS, PostgreSQL, and MongoDB, with a strong focus on RESTful APIs, backend architecture, and database design. I enjoy turning real-world problems into reliable software solutions while continuously improving my engineering, collaboration, and system design skills.",
+  shortBio:
+    "I'm a Full-Stack Developer and Backend Engineer specializing in building scalable, secure, and user-focused web applications. I work primarily with React, Next.js, Node.js, NestJS, PostgreSQL, and MongoDB, with a strong focus on RESTful APIs, backend architecture, and database design. I enjoy turning real-world problems into reliable software solutions while continuously improving my engineering, collaboration, and system design skills.",
+  description:
+    "Imoh Ben (Imoh Sylvester Ben) is a Full-Stack Developer and Backend Engineer specializing in scalable, secure, user-focused web applications. Experienced with React, Next.js, Node.js, NestJS, PostgreSQL, and MongoDB — focused on RESTful APIs, backend architecture, database design, and turning real-world problems into reliable software solutions.",
+  url: "https://imohben.com",
+  author: "Imoh Sylvester Ben",
+  creator: "Imoh Ben",
+  keywords: [
+    "Imoh Ben",
+    "Imoh Sylvester Ben",
+    "Full-Stack Developer",
+    "Backend Engineer",
+    "React",
+    "Next.js",
+    "Node.js",
+    "TypeScript",
+    "NestJS",
+    "PostgreSQL",
+    "MongoDB",
+    "RESTful APIs",
+    "Database Design",
+    "Backend Architecture",
+    "Software Engineer",
+    "Portfolio",
+  ],
+  social: {
+    github: "https://github.com/IbenConnect",
+    linkedin: "https://www.linkedin.com/in/imoh-ben-a569332ab",
+    email: "mailto:ibenconnect@gmail.com",
+  },
+  resumeUrl: "/resume/imoh-ben-resume.pdf",
+  profileImage: "/profile photo.jpg",
+} as const;
