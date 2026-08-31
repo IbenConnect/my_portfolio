@@ -85,11 +85,11 @@ export default function HeroSocials({
               title={label}
               className={cn(
                 "inline-flex h-11 w-11 items-center justify-center rounded-full",
-                "border border-[oklch(0.45_0.10_260_/_0.40)] bg-[oklch(0.17_0.03_265_/_0.55)] text-foreground/85 backdrop-blur-xl",
+                "border border-[oklch(0.60_0.15_35_/_0.40)] bg-[oklch(0.15_0.02_25_/_0.58)] text-foreground/85 backdrop-blur-xl",
                 "transition-all duration-300",
-                "hover:border-[oklch(0.70_0.18_260_/_0.60)] hover:bg-[oklch(0.70_0.18_260_/_0.10)] hover:text-foreground",
-                "hover:shadow-[0_10px_30px_-12px_oklch(0.55_0.22_260_/_0.45)]",
-                "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[oklch(0.72_0.18_260)] focus-visible:ring-offset-2 focus-visible:ring-offset-[oklch(0.14_0.02_265)]",
+                "hover:border-[oklch(0.75_0.18_35_/_0.60)] hover:bg-[oklch(0.74_0.18_35_/_0.10)] hover:text-foreground",
+                "hover:shadow-[0_10px_30px_-12px_oklch(0.65_0.20_30_/_0.45)]",
+                "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[oklch(0.72_0.18_35)] focus-visible:ring-offset-2 focus-visible:ring-offset-[oklch(0.10_0.02_25)]",
               )}
               {...linkProps}
             >

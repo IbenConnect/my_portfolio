@@ -43,28 +43,26 @@ function MailIcon(props: React.SVGProps<SVGSVGElement>) {
 
 export default function Footer() {
   const conciseNav = navigation.filter((item) =>
-    ["About", "Skills", "Projects", "Contact"].includes(item.label),
+    ["About", "Skills", "Projects", "Team", "Contact"].includes(item.label),
   );
 
   const year = new Date().getFullYear();
 
   return (
-    <footer className="relative z-0 border-t border-[oklch(0.45_0.10_260_/_0.30)] bg-[oklch(0.11_0.02_265_/_0.85)] backdrop-blur-xl py-14">
+    <footer className="relative z-0 border-t border-white/10 bg-[oklch(0.08_0.02_25_/_0.8)] py-14 backdrop-blur-xl">
       <div
         aria-hidden
-        className="pointer-events-none absolute inset-x-0 top-0 -z-10 h-40 bg-[radial-gradient(ellipse_60%_80%_at_50%_0%,oklch(0.45_0.15_260_/_0.18),transparent_65%)]"
+        className="pointer-events-none absolute inset-x-0 top-0 -z-10 h-40 bg-[radial-gradient(ellipse_60%_80%_at_50%_0%,rgba(249,115,22,0.08),transparent_65%)]"
       />
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="mx-auto flex max-w-3xl flex-col items-center gap-10 text-center">
+        <div className="mx-auto flex max-w-3xl flex-col items-center gap-8 text-center">
           <div className="space-y-3">
             <p className="text-3xl font-semibold tracking-tight">
               <span className="text-gradient-brand">{siteConfig.name.split(" ")[0]}</span>
               <span className="text-white"> {siteConfig.name.split(" ").slice(1).join(" ")}</span>
             </p>
-            <p className="max-w-sm text-base leading-7 text-white">
-              {siteConfig.role} building scalable
-              <br />
-              and reliable digital experiences.
+            <p className="max-w-sm text-base leading-7 text-muted-foreground">
+              {siteConfig.role} building reliable digital experiences.
             </p>
           </div>
 
@@ -74,7 +72,7 @@ export default function Footer() {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="GitHub"
-              className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-[oklch(0.45_0.10_260_/_0.35)] bg-[oklch(0.17_0.03_265_/_0.55)] text-muted-foreground backdrop-blur transition-all hover:border-[oklch(0.65_0.18_260_/_0.55)] hover:bg-[oklch(0.70_0.18_260_/_0.10)] hover:text-foreground"
+              className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/10 bg-white/3 text-muted-foreground transition-all hover:border-orange-400/60 hover:bg-orange-500/10 hover:text-foreground"
             >
               <GithubIcon className="h-[1.05rem] w-[1.05rem]" />
             </a>
@@ -83,14 +81,14 @@ export default function Footer() {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="LinkedIn"
-              className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-[oklch(0.45_0.10_260_/_0.35)] bg-[oklch(0.17_0.03_265_/_0.55)] text-muted-foreground backdrop-blur transition-all hover:border-[oklch(0.65_0.18_260_/_0.55)] hover:bg-[oklch(0.70_0.18_260_/_0.10)] hover:text-foreground"
+              className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/10 bg-white/3 text-muted-foreground transition-all hover:border-orange-400/60 hover:bg-orange-500/10 hover:text-foreground"
             >
               <LinkedinIcon className="h-[1.05rem] w-[1.05rem]" />
             </a>
             <a
               href={siteConfig.social.email}
               aria-label="Email"
-              className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-[oklch(0.45_0.10_260_/_0.35)] bg-[oklch(0.17_0.03_265_/_0.55)] text-muted-foreground backdrop-blur transition-all hover:border-[oklch(0.65_0.18_260_/_0.55)] hover:bg-[oklch(0.70_0.18_260_/_0.10)] hover:text-foreground"
+              className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/10 bg-white/3 text-muted-foreground transition-all hover:border-orange-400/60 hover:bg-orange-500/10 hover:text-foreground"
             >
               <MailIcon className="h-[1.05rem] w-[1.05rem]" />
             </a>
@@ -100,24 +98,18 @@ export default function Footer() {
             <ul className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-base font-medium text-white">
               {conciseNav.map((item, idx) => (
                 <li key={item.href} className="flex items-center gap-4">
-                  <Link
-                    href={item.href}
-                    className="transition-colors hover:text-foreground"
-                  >
+                  <Link href={item.href} className="transition-colors hover:text-foreground">
                     {item.label}
                   </Link>
                   {idx < conciseNav.length - 1 && (
-                    <span
-                      aria-hidden
-                      className="h-1 w-1 rounded-full bg-[oklch(0.70_0.18_260_/_0.55)]"
-                    />
+                    <span aria-hidden className="h-1 w-1 rounded-full bg-orange-400/70" />
                   )}
                 </li>
               ))}
             </ul>
           </nav>
 
-          <p className="text-sm font-medium text-white">
+          <p className="text-sm font-medium text-muted-foreground">
             © {year} {siteConfig.name}
           </p>
         </div>

@@ -25,6 +25,10 @@ export const navigation: NavItem[] = [
     href: "#experience",
   },
   {
+    label: "Team",
+    href: "#team",
+  },
+  {
     label: "Contact",
     href: "#contact",
   },

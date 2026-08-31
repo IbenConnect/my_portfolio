@@ -5,6 +5,7 @@ import Projects from "@/components/sections/projects";
 import Expertise from "@/components/sections/expertise";
 import Process from "@/components/sections/process";
 import Experience from "@/components/sections/experience";
+import Team from "@/components/sections/team";
 import Testimonials from "@/components/sections/testimonials";
 import Github from "@/components/sections/github";
 import Contact from "@/components/sections/contact";
@@ -19,6 +20,7 @@ export default function HomePage() {
       <Expertise />
       <Process />
       <Experience />
+      <Team />
       <Testimonials />
       <Github />
       <Contact />

@@ -76,8 +76,8 @@ export default function Navbar() {
     "fixed inset-x-0 top-0 z-50",
     !reducedMotion && "transition-all duration-300",
     scrolled
-      ? "border-b border-[oklch(0.45_0.10_260_/_0.35)] bg-[oklch(0.12_0.02_265_/_0.78)] backdrop-blur-xl supports-[backdrop-filter]:bg-[oklch(0.12_0.02_265_/_0.65)] shadow-[0_12px_40px_-16px_oklch(0.55_0.22_260_/_0.35)]"
-      : "border-b border-transparent bg-[oklch(0.12_0.02_265_/_0.0)] backdrop-blur supports-[backdrop-filter]:bg-[oklch(0.12_0.02_265_/_0.0)]",
+      ? "border-b border-white/10 bg-[oklch(0.11_0.02_25_/_0.82)] backdrop-blur-xl supports-[backdrop-filter]:bg-[oklch(0.11_0.02_25_/_0.75)] shadow-[0_10px_30px_-18px_rgba(249,115,22,0.18)]"
+      : "border-b border-transparent bg-transparent backdrop-blur supports-[backdrop-filter]:bg-transparent",
   );
 
   return (
@@ -123,11 +123,11 @@ export default function Navbar() {
                   {item.label}
                   {isActive &&
                     (reducedMotion ? (
-                      <span className="absolute -bottom-1 left-0 right-0 h-[2px] rounded-full bg-gradient-to-r from-[oklch(0.78_0.20_260)] via-[oklch(0.72_0.18_200)] to-[oklch(0.72_0.15_160)]" />
+                      <span className="absolute -bottom-1 left-0 right-0 h-[2px] rounded-full bg-gradient-to-r from-[oklch(0.78_0.20_35)] via-[oklch(0.74_0.18_32)] to-[oklch(0.70_0.15_30)]" />
                     ) : (
                       <motion.span
                         layoutId="navbar-active-indicator"
-                        className="absolute -bottom-1 left-0 right-0 h-[2px] rounded-full bg-gradient-to-r from-[oklch(0.78_0.20_260)] via-[oklch(0.72_0.18_200)] to-[oklch(0.72_0.15_160)]"
+                        className="absolute -bottom-1 left-0 right-0 h-[2px] rounded-full bg-gradient-to-r from-[oklch(0.78_0.20_35)] via-[oklch(0.74_0.18_32)] to-[oklch(0.70_0.15_30)]"
                         transition={{
                           type: "spring",
                           stiffness: 420,
@@ -209,7 +209,7 @@ function MobileMenu({ navItems, activeId, onSelect, onClose, reducedMotion }: Mo
   const menuContent = (
     <>
       <div
-        className="fixed inset-0 top-16 -z-10 bg-black/45 backdrop-blur-[2px]"
+        className="fixed inset-0 top-16 -z-10 bg-slate-900/10 backdrop-blur-[2px]"
         onClick={onClose}
       />
       <div className="container mx-auto flex flex-col gap-1 px-4 py-5 sm:px-6">
@@ -218,8 +218,8 @@ function MobileMenu({ navItems, activeId, onSelect, onClose, reducedMotion }: Mo
           const linkClass = cn(
             "rounded-md px-3 py-3 text-lg font-semibold transition-colors",
             isActive
-              ? "bg-[oklch(0.70_0.18_260_/_0.12)] text-foreground border border-[oklch(0.70_0.18_260_/_0.28)]"
-              : "text-muted-foreground/90 hover:bg-[oklch(0.70_0.18_260_/_0.08)] hover:text-foreground",
+              ? "bg-[oklch(0.74_0.18_35_/_0.12)] text-foreground border border-[oklch(0.74_0.18_35_/_0.28)]"
+              : "text-muted-foreground/90 hover:bg-[oklch(0.74_0.18_35_/_0.08)] hover:text-foreground",
           );
           const linkProps = {
             key: item.href,
@@ -255,7 +255,7 @@ function MobileMenu({ navItems, activeId, onSelect, onClose, reducedMotion }: Mo
                 e.preventDefault();
                 onSelect("#resume");
               }}
-              className="inline-flex w-full items-center justify-center rounded-full bg-gradient-to-br from-[oklch(0.72_0.20_260)] to-[oklch(0.58_0.22_260)] px-5 py-2.5 text-base font-semibold text-white transition-all hover:brightness-110"
+              className="inline-flex w-full items-center justify-center rounded-full bg-gradient-to-br from-[oklch(0.72_0.18_35)] to-[oklch(0.60_0.18_28)] px-5 py-2.5 text-base font-semibold text-white transition-all hover:brightness-110"
             >
               Download Resume
             </a>
@@ -275,7 +275,7 @@ function MobileMenu({ navItems, activeId, onSelect, onClose, reducedMotion }: Mo
                 e.preventDefault();
                 onSelect("#resume");
               }}
-              className="inline-flex w-full items-center justify-center rounded-full bg-gradient-to-br from-[oklch(0.72_0.20_260)] to-[oklch(0.58_0.22_260)] px-5 py-2.5 text-2xl font-semibold text-white shadow-[0_10px_36px_-12px_oklch(0.55_0.22_260_/_0.65)] transition-all hover:brightness-110"
+              className="inline-flex w-full items-center justify-center rounded-full bg-gradient-to-br from-[oklch(0.72_0.18_35)] to-[oklch(0.60_0.18_28)] px-5 py-2.5 text-2xl font-semibold text-white shadow-[0_10px_36px_-12px_oklch(0.65_0.20_30_/_0.65)] transition-all hover:brightness-110"
             >
               Download Resume
             </a>

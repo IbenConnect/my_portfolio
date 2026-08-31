@@ -16,7 +16,7 @@ export default function HeroBadge({ status }: HeroBadgeProps) {
   const dot = reduced ? (
     <span
       aria-hidden
-      className="h-2 w-2 rounded-full bg-[oklch(0.70_0.17_160)] shadow-[0_0_0_3px_oklch(0.70_0.17_160_/_0.15)]"
+      className="h-2 w-2 rounded-full bg-[oklch(0.72_0.18_35)] shadow-[0_0_0_3px_oklch(0.72_0.18_35_/_0.15)]"
     />
   ) : (
     <motion.span
@@ -24,11 +24,11 @@ export default function HeroBadge({ status }: HeroBadgeProps) {
       variants={pulseDot}
       initial="hidden"
       animate="visible"
-      className="relative inline-block h-2 w-2 rounded-full bg-[oklch(0.70_0.17_160)]"
+      className="relative inline-block h-2 w-2 rounded-full bg-[oklch(0.72_0.18_35)]"
     >
       <span
         aria-hidden
-        className="absolute inset-0 rounded-full bg-[oklch(0.70_0.17_160)] opacity-45 blur-[2px]"
+        className="absolute inset-0 rounded-full bg-[oklch(0.72_0.18_35)] opacity-45 blur-[2px]"
       />
     </motion.span>
   );
@@ -44,9 +44,9 @@ export default function HeroBadge({ status }: HeroBadgeProps) {
       <div
         aria-live="polite"
         className={cn(
-          "inline-flex items-center gap-2.5 rounded-full border border-[oklch(0.70_0.18_260_/_0.30)]",
-          "bg-[oklch(0.17_0.03_265_/_0.60)] px-3.5 py-1.5 backdrop-blur-xl supports-[backdrop-filter]:bg-[oklch(0.17_0.03_265_/_0.40)]",
-          "shadow-[0_8px_30px_-10px_oklch(0.55_0.22_260_/_0.35)]",
+          "inline-flex items-center gap-2.5 rounded-full border border-[oklch(0.70_0.18_35_/_0.30)]",
+          "bg-[oklch(0.17_0.02_25_/_0.65)] px-3.5 py-1.5 backdrop-blur-xl supports-[backdrop-filter]:bg-[oklch(0.17_0.02_25_/_0.45)]",
+          "shadow-[0_8px_30px_-10px_oklch(0.60_0.20_30_/_0.35)]",
         )}
       >
         {dot}
@@ -62,9 +62,9 @@ export default function HeroBadge({ status }: HeroBadgeProps) {
       initial="hidden"
       animate="visible"
       className={cn(
-        "inline-flex items-center gap-2.5 rounded-full border border-[oklch(0.70_0.18_260_/_0.30)]",
-        "bg-[oklch(0.17_0.03_265_/_0.60)] px-3.5 py-1.5 backdrop-blur-xl supports-[backdrop-filter]:bg-[oklch(0.17_0.03_265_/_0.40)]",
-        "shadow-[0_8px_30px_-10px_oklch(0.55_0.22_260_/_0.35)]",
+        "inline-flex items-center gap-2.5 rounded-full border border-[oklch(0.70_0.18_35_/_0.30)]",
+        "bg-[oklch(0.17_0.02_25_/_0.65)] px-3.5 py-1.5 backdrop-blur-xl supports-[backdrop-filter]:bg-[oklch(0.17_0.02_25_/_0.45)]",
+        "shadow-[0_8px_30px_-10px_oklch(0.60_0.20_30_/_0.35)]",
       )}
     >
       {dot}

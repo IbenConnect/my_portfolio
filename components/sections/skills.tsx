@@ -1,51 +1,68 @@
-export default function Skills() {
-  const skills = [
-    "TypeScript",
-    "JavaScript",
-    "React",
-    "Next.js",
-    "Node.js",
-    "NestJS",
-    "Express",
-    "RESTful APIs",
-    "PostgreSQL",
-    "MongoDB",
-    "Prisma",
-    "Tailwind CSS",
-    "Git",
-    "Docker",
-  ];
+"use client";
 
+import { motion } from "framer-motion";
+
+const skillGroups = [
+  {
+    label: "Frontend",
+    items: ["TypeScript", "React", "Next.js", "Tailwind CSS", "JavaScript"],
+  },
+  {
+    label: "Backend",
+    items: ["Node.js", "NestJS", "Express", "REST APIs", "Authentication"],
+  },
+  {
+    label: "Data & Systems",
+    items: ["PostgreSQL", "MongoDB", "Prisma", "Redis", "System Design"],
+  },
+  {
+    label: "Workflow",
+    items: ["Git", "Docker", "CI/CD", "Testing", "Product Strategy"],
+  },
+];
+
+export default function Skills() {
   return (
-    <section
-      id="skills"
-      className="container mx-auto px-4 py-20 sm:px-6 lg:px-8"
-    >
-      <div className="mx-auto max-w-3xl">
-        <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
-          <span className="text-gradient-brand">Skills</span> &amp; Tools
+    <section id="skills" className="container mx-auto px-4 py-20 sm:px-6 lg:px-8">
+      <motion.div
+        initial={{ opacity: 0, y: 28 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.2 }}
+        transition={{ duration: 0.5, ease: "easeOut" }}
+        className="mx-auto max-w-5xl"
+      >
+        <span className="section-heading">Skills</span>
+        <h2 className="mt-6 text-3xl font-semibold tracking-tight text-foreground sm:text-4xl lg:text-5xl">
+          Tools and systems I use to build reliable software.
         </h2>
-        <p className="mt-4 text-lg leading-7 text-white sm:text-xl">
-          A curated stack I use daily to design, ship, and scale production
-          software.
-        </p>
-        <div className="mt-10 flex flex-wrap gap-3">
-          {skills.map((skill) => (
-            <div
-              key={skill}
-              className="group rounded-full border border-[oklch(0.45_0.10_260_/_0.40)] bg-[oklch(0.17_0.03_265_/_0.55)] px-5 py-2.5 text-base font-semibold text-white backdrop-blur-xl transition-all duration-300 hover:-translate-y-0.5 hover:border-[oklch(0.70_0.18_260_/_0.60)] hover:bg-[oklch(0.70_0.18_260_/_0.10)] hover:text-white hover:shadow-[0_10px_30px_-12px_oklch(0.55_0.22_260_/_0.45)]"
+
+        <div className="mt-10 grid gap-5 md:grid-cols-2 xl:grid-cols-4">
+          {skillGroups.map((group, index) => (
+            <motion.div
+              key={group.label}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.25 }}
+              transition={{ duration: 0.45, delay: index * 0.08 }}
+              className="section-shell rounded-2xl p-5"
             >
-              <span className="inline-flex items-center gap-2">
-                <span
-                  aria-hidden
-                  className="h-1.5 w-1.5 rounded-full bg-gradient-to-r from-[oklch(0.78_0.20_260)] to-[oklch(0.70_0.15_160)]"
-                />
-                {skill}
-              </span>
-            </div>
+              <div className="mb-5 text-xs font-semibold uppercase tracking-[0.2em] text-muted-foreground/80">
+                {group.label}
+              </div>
+              <div className="flex flex-wrap gap-2">
+                {group.items.map((skill) => (
+                  <span
+                    key={skill}
+                    className="rounded-full border border-orange-500/20 bg-orange-500/5 px-3 py-1.5 text-sm font-medium text-foreground/90"
+                  >
+                    {skill}
+                  </span>
+                ))}
+              </div>
+            </motion.div>
           ))}
         </div>
-      </div>
+      </motion.div>
     </section>
   );
 }

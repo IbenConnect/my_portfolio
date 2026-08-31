@@ -46,13 +46,21 @@ export default function Hero() {
       aria-label="Introduction"
       className="relative isolate flex min-h-[100svh] w-full items-center overflow-hidden pt-24 pb-24 sm:pt-28 lg:pt-32 lg:pb-28"
     >
+      <div aria-hidden className="pointer-events-none absolute inset-0 -z-20 overflow-hidden">
+        <div
+          className="absolute inset-0 scale-105 bg-cover bg-center opacity-50"
+          style={{
+            backgroundImage: "url('/tech1111.jpg')",
+            backgroundPosition: "center center",
+          }}
+        />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(10,13,18,0.25),rgba(10,13,18,0.68)_42%,rgba(5,7,11,0.92)_100%)]" />
+        <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(6,8,12,0.94)_0%,rgba(6,8,12,0.72)_38%,rgba(6,8,12,0.76)_100%)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(249,115,22,0.16),transparent_22%),radial-gradient(circle_at_80%_30%,rgba(251,146,60,0.12),transparent_20%)]" />
+      </div>
       <div
         aria-hidden
-        className="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(ellipse_65%_60%_at_50%_30%,oklch(0.40_0.15_260_/_0.28),transparent_65%)]"
-      />
-      <div
-        aria-hidden
-        className="pointer-events-none absolute inset-x-0 bottom-0 -z-10 h-40 bg-gradient-to-t from-background via-background/70 to-transparent"
+        className="pointer-events-none absolute inset-x-0 bottom-0 -z-10 h-48 bg-gradient-to-t from-[#070b12] via-[#070b12]/80 to-transparent"
       />
 
       <Container className="relative">
@@ -68,6 +76,24 @@ export default function Hero() {
           <div className="order-1 flex w-full justify-center lg:order-2">
             <HeroVisual image={profile.profileImage} />
           </div>
+        </div>
+
+        <div className="mt-12 grid gap-4 sm:grid-cols-3">
+          {[
+            { value: "5+", label: "Years building products" },
+            { value: "12+", label: "End-to-end launches" },
+            { value: "99%", label: "Focus on quality" },
+          ].map((item) => (
+            <div
+              key={item.label}
+              className="metric-card rounded-2xl px-5 py-4 text-left"
+            >
+              <div className="text-2xl font-semibold tracking-tight text-foreground">
+                {item.value}
+              </div>
+              <div className="mt-1 text-sm text-muted-foreground">{item.label}</div>
+            </div>
+          ))}
         </div>
       </Container>
 

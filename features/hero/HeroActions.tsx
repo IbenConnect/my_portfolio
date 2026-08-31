@@ -51,12 +51,12 @@ export default function HeroActions({ primary, secondary }: HeroActionsProps) {
         className={cn(
           buttonVariants({ variant: "default", size: "lg" }),
           pillBase,
-          "bg-gradient-to-br from-[oklch(0.72_0.20_260)] via-[oklch(0.66_0.22_260)] to-[oklch(0.58_0.22_260)]",
-          "text-white border border-[oklch(0.78_0.18_260_/_0.45)]",
-          "shadow-[0_10px_40px_-12px_oklch(0.55_0.22_260_/_0.60)]",
-          "hover:from-[oklch(0.76_0.20_260)] hover:via-[oklch(0.70_0.22_260)] hover:to-[oklch(0.62_0.22_260)]",
-          "hover:shadow-[0_14px_48px_-12px_oklch(0.55_0.22_260_/_0.72)]",
-          "focus-visible:ring-2 focus-visible:ring-[oklch(0.72_0.18_260)] focus-visible:ring-offset-2 focus-visible:ring-offset-[oklch(0.14_0.02_265)]",
+          "bg-gradient-to-br from-[oklch(0.72_0.18_35)] via-[oklch(0.76_0.17_32)] to-[oklch(0.64_0.18_28)]",
+          "text-white border border-[oklch(0.78_0.18_35_/_0.45)]",
+          "shadow-[0_10px_40px_-12px_oklch(0.60_0.20_30_/_0.60)]",
+          "hover:from-[oklch(0.76_0.20_35)] hover:via-[oklch(0.80_0.18_32)] hover:to-[oklch(0.68_0.20_30)]",
+          "hover:shadow-[0_14px_48px_-12px_oklch(0.60_0.20_30_/_0.72)]",
+          "focus-visible:ring-2 focus-visible:ring-[oklch(0.72_0.18_35)] focus-visible:ring-offset-2 focus-visible:ring-offset-[oklch(0.10_0.02_25)]",
           "transition-all duration-300",
         )}
       >
@@ -73,9 +73,9 @@ export default function HeroActions({ primary, secondary }: HeroActionsProps) {
         className={cn(
           buttonVariants({ variant: "outline", size: "lg" }),
           pillBase,
-          "bg-[oklch(0.17_0.03_265_/_0.55)] border-[oklch(0.45_0.10_260_/_0.45)] text-foreground/95 backdrop-blur-xl",
-          "hover:bg-[oklch(0.22_0.04_265_/_0.70)] hover:border-[oklch(0.60_0.18_260_/_0.55)] hover:text-foreground",
-          "focus-visible:ring-2 focus-visible:ring-[oklch(0.72_0.18_260)] focus-visible:ring-offset-2 focus-visible:ring-offset-[oklch(0.14_0.02_265)]",
+          "bg-[oklch(0.14_0.02_25_/_0.55)] border-[oklch(0.68_0.16_32_/_0.42)] text-foreground/95 backdrop-blur-xl",
+          "hover:bg-[oklch(0.18_0.03_30_/_0.72)] hover:border-[oklch(0.74_0.18_35_/_0.60)] hover:text-foreground",
+          "focus-visible:ring-2 focus-visible:ring-[oklch(0.72_0.18_35)] focus-visible:ring-offset-2 focus-visible:ring-offset-[oklch(0.10_0.02_25)]",
           "transition-all duration-300",
         )}
       >

@@ -1,10 +1,10 @@
 export const siteConfig = {
-  name: "My Portfolio",
+  name: "iBEN Connect",
   fullName: "Imoh Sylvester Ben",
   professionalTitle: "Mr",
   shortName: "IB",
   initials: "IB",
-  title: "iben",
+  title: "iben connect",
   role: "Full-Stack Developer & Backend Engineer",
   tagline:
     "I'm a Full-Stack Developer and Backend Engineer specializing in building scalable, secure, and user-focused web applications. I work primarily with React, Next.js, Node.js, NestJS, PostgreSQL, and MongoDB, with a strong focus on RESTful APIs, backend architecture, and database design. I enjoy turning real-world problems into reliable software solutions while continuously improving my engineering, collaboration, and system design skills.",
