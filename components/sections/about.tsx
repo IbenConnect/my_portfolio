@@ -25,7 +25,7 @@ export default function About() {
             <h2 className="mt-6 text-3xl font-semibold tracking-tight text-foreground sm:text-4xl lg:text-5xl">
               I build thoughtful digital systems that feel as strong as they look.
             </h2>
-            <div className="mt-6 space-y-5 text-base leading-8 text-muted-foreground sm:text-lg">
+            <div className="mt-6 space-y-5 text-base leading-8 text-muted-foreground sm:text-lg text-justify">
               <p>{siteConfig.shortBio}</p>
               <p>
                 I’m committed to writing maintainable code, shipping reliable experiences,

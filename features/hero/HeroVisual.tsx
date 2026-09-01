@@ -35,7 +35,7 @@ export default function HeroVisual({ image }: HeroVisualProps) {
         className={cn(
           "relative aspect-square w-full overflow-hidden rounded-full",
           "border border-[oklch(0.55_0.14_260_/_0.45)]",
-          "shadow-[0_30px_80px_-20px_oklch(0.55_0.22_260_/_0.50),0_8px_30px_-12px_oklch(0.00_0.00_0_/_0.80)]",
+          "shadow-[0_12px_32px_-8px_oklch(0.55_0.22_260_/_0.25),0_4px_12px_-4px_oklch(0.00_0.00_0_/_0.40)]",
           "bg-[oklch(0.17_0.03_265_/_0.70)] ring-1 ring-inset ring-white/5 backdrop-blur-sm",
         )}
       >
